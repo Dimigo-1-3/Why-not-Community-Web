@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+ 
+{% block content %}
+<style>  
+  body {
+    margin: 0;
+  }
+  #background{
+    
+    background: url("{{ url_for('static', filename='img/background.jpg') }}");
+  }
+</style>
+<div id="background">
+  <div class="row justify-content-center">
+    <div class="col-md-6 text-center mb-5">
+      <h2 class="heading-section" id="login-title">SignUp</h2>
+    </div>
+  </div>
+  <form method="POST" class="signin-form">
+    <div id="login-input">
+      <label class="label" for="id">학번</label>
+      <input type="text" class="form-control" placeholder="학번" name="id" required>
+    </div>
+    <div id="login-input">
+      <label class="label" for="username">이름</label>
+      <input type="text" class="form-control" placeholder="이름" name="username" required>
+    </div>
+    <div id="login-input">
+      <label class="label" for="pw">PW</label>
+      <input type="password" class="form-control" placeholder="PW" name="pw" required>
+    </div>
+    <div id="login-input">
+      <label class="label" for="val">1-3 마스코트 이름은?</label>
+      <input type="text" class="form-control" placeholder="답" name="val" required>
+    </div>
+    <div id="login-input">
+      <label class="label" for="valtwo">1학기 임시반장 이름은?</label>
+      <input type="text" class="form-control" placeholder="답" name="valtwo" required>
+    </div>
+    <div class="form-group">
+      <button type="submit" class="form-control btn btn-primary submit px-3" id="login-input"><p>로그인</p></button>
+    </div>
+  </form>
+</div>
+{% endblock %}

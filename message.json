@@ -1,0 +1,19 @@
+{
+    "General" : {
+        "service_name" : "Why Not?"
+    },
+    "Auth":{
+        "require_id" : "ID를 입력해주세요",
+        "require_pw" : "PW를 입력해주세요",
+        "wrong_id_length" : "ID 길이를 확인해 주세요",
+        "wrong_pw_length" : "PW 길이를 확인해 주세요",
+        "wrong_id_format" : "ID 형식을 맞춰 입력해주세요",
+        "wrong_pw_format" : "PW 형식을 맞춰 입력해주세요",
+        "wrong_id_or_pw" : "ID 또는 PW가 틀렸습니다",
+        "blocked_account" : "관리자에 의해 비활성화되었거나 탈퇴 절차에 있는 계정입니다",
+        "exist_id" : "이미 존재하는 ID 입니다",
+        "exist_email" : "이미 존재하는 이메일 입니다",
+        "complete_validation" : "인증을 완료했습니다. 이제 로그인 할수 있습니다",
+        "logout" : "로그아웃 되었습니다"
+    }
+}
