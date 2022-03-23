@@ -9,7 +9,7 @@ bp = Blueprint('auth', __name__, url_prefix='/auth')
 
 @bp.route("/signin", methods=["GET","POST"])
 def signin():
-    if session.get("id") == None:
+    if session.get("id", None) == None:
         if request.method == "POST":
             id = request.form["id"]
             pw = request.form["pw"]
@@ -26,7 +26,7 @@ def signin():
         return redirect(url_for("main.index"))
 @bp.route("/signup",methods=["GET","POST"])
 def signup():
-    if session.get("id") == None:
+    if session.get("id", None) == None:
         if request.method == "POST":
             id = request.form["id"]
             pw = request.form["pw"]
@@ -50,5 +50,5 @@ def signup():
             return render_template("signup.html")
 @bp.route("/logout", methods=["GET"])
 def logout():
-    if session.get("id") != None:
+    if session.get("id", None) != None:
         session.clear()

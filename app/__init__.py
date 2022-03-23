@@ -16,7 +16,7 @@ from app.views import main_view, auth_view
 from app import models
 @app.before_request
 def add_global():
-    id = session.get("id")
+    id = session.get("id", None)
     if id != None:
         User_object = models.User.query.filter_by(id=id).first()
         g.user = (id,User_object.username)
