@@ -7,7 +7,7 @@ def pw_checker(pw):
     regex ='''^(?=.*[a-z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,15}''' #영어,숫자,특수 포함 8에서 15자
     return regex_checker(pw, regex)
 def id_checker(id):
-    regex = '''13\\d\\d'''
+    regex = '''13([0-3])([0-9])'''
     return regex_checker(id, regex) and int(id) <= 1332
 def validation1_checker(val):
     return val == "웹펭"
