@@ -52,3 +52,4 @@ def signup():
 def logout():
     if session.get("id", None) != None:
         session.clear()
+    return redirect(url_for("main.index"))
