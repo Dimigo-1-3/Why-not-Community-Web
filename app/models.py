@@ -85,3 +85,9 @@ class Post(db.Model):
         self.text = text
         self.created_date = datetime.datetime.now(tz=KST)
         self.reply_id = ""
+    def list_reply(self):
+        reply_id_list = self.reply_id.split(",")
+        reply_list = []
+        for i in range(0,len(reply_id_list)):
+            reply_list.append(Answer.query.filter_by(id=int(reply_id_list[i])).first())
+        return reply_list
